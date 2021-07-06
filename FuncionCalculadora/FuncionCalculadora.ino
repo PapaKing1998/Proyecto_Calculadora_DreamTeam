@@ -11,6 +11,11 @@ int funcion_suma(int a, int b){
   return sumaR;
 }
 
+int funcion_resta (int n1, int n2){
+  int RestaR = n1 - n2;
+  return RestaR;
+}
+
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
@@ -44,7 +49,10 @@ void loop() {
     Serial.print("El resultado de la suma es: ");
     Serial.println(suma);
     delay(10);
-    //resta = funcion_resta(num1,num2);
+    resta = funcion_resta(num1,num2);
+    Serial.print("El resultado de la resta es: ");
+    Serial.println(resta);
+    delay(10);
     //multiplicacion = funcion_mult(num1,num2);
     //division = funcion_div(num1,num2);
     flag = 1;
