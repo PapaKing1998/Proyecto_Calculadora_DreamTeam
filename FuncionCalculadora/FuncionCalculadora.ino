@@ -2,7 +2,8 @@
 
 String Tnum1, Tnum2;
 int num1, num2;
-int suma, resta, multiplicacion, division;
+int suma, resta, multiplicacion;
+float diivision;
 int flag = 1;
 int flag2 = 1;
 
@@ -19,6 +20,11 @@ int funcion_suma(int a, int b){
 int funcion_resta (int n1, int n2){
   int RestaR = n1 - n2;
   return RestaR;
+}
+
+float funcion_division(int a, int b){
+float DivR = a/b;
+  return DivR; 
 }
 
 void setup() {
@@ -61,7 +67,10 @@ void loop() {
     multiplicacion = funcion_multiplicion(num1,num2);
     Serial.print("El resultado de la multiplicación es: ");
     Serial.println(multiplicacion);
-    //division = funcion_div(num1,num2);
+    delay(10);
+    division = funcion_division(num1,num2);
+    Serial.print("El resultado de la division es: ");
+    Serial.println(division);
     flag = 1;
   }else{
     flag = 0;
