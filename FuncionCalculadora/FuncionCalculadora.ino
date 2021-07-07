@@ -6,6 +6,11 @@ int suma, resta, multiplicacion, division;
 int flag = 1;
 int flag2 = 1;
 
+int funcion_multiplicacion(int a, int b){
+int multiR = a*b;
+  return multiR; 
+}
+
 int funcion_suma(int a, int b){
   int sumaR = a + b;
   return sumaR;
@@ -53,7 +58,9 @@ void loop() {
     Serial.print("El resultado de la resta es: ");
     Serial.println(resta);
     delay(10);
-    //multiplicacion = funcion_mult(num1,num2);
+    multiplicacion = funcion_multiplicion(num1,num2);
+    Serial.print("El resultado de la multiplicación es: ");
+    Serial.println(multiplicacion);
     //division = funcion_div(num1,num2);
     flag = 1;
   }else{
